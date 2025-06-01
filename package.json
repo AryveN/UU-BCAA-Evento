@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "start:dev": "concurrently \"npm run start\" \"npm --prefix client start\"",
     "dev": "nodemon index.js",
     "test": "jest --runInBand"
   },
@@ -23,11 +24,13 @@
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongoose": "^8.14.1"
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "jest": "^29.7.0",
     "mongodb-memory-server": "^10.1.4",
     "nodemon": "^3.1.10",

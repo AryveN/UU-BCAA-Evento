@@ -9,6 +9,9 @@ const errorHandler  = require('./src/middleware/errorHandler');
 
 const app = express();
 app.use(bodyParser.json());
+const cors = require('cors');
+app.use(cors());
+
 
 // Připojení a spuštění serveru jen pokud je hlavní modul
 if (require.main === module) {
